@@ -1,25 +1,58 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
+<ion-view title="掌上炉石">
   <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </div>
+    <form novalidate="novalidate" name="loginForm">
+        <div class="container">
+          <div class="form-control">
+            <label>邮箱:</label>
+            <input type="text" name="email" ng-model="credentials.username" required>
+          </div>
+          <div class="form-control">
+            <label>密码:</label>
+            <input type="password" name="password" ng-model="credentials.password" required>
+          </div>
+          <div class="form-controls">
+            <div class="fr">
+              <i class="ion-ios-help-outline"></i>
+              <label><a href="">忘记密码?</a></label>
+            </div>
+          </div>
+          <div class="ma">
+            <button ng-disabled="!loginForm.$valid" class="button button-block button-royal"
+                    ng-click="login()">
+              登录
+            </button>
+          </div>
+          <div class="ma">
+            <div class="third-login">
+              <div class="third-title">
+                合作方帐号登录
+                <div class="left-line">
+                  <hr>
+                </div>
+                <div class="right-line">
+                  <hr>
+                </div>
+              </div>
+              <div class="third-social">
+                <ul>
+                  <li>
+                    <a href="">
+                      <div class="weibo"></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="wechat"></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ma">
+            <button class="button button-block button-royal button-outline" ng-click="goToRegister()">没有帐号? 立即注册</button>
+          </div>
+        </div>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-view>
