@@ -78,4 +78,14 @@ a {
 .third-social ul>li {
   padding-right: 10px;
 }
-
+.pic {
+  display: table;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.upload-pic {
+  background-image: url('../img/touxiang.jpg');
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,38 @@
+<ion-view title="Register">
+  <ion-content>
+    <form novalidate="novalidate" name="registerForm">
+      <div class="container">
+        <div class="pic">
+          <div class="upload-pic"></div>
+        </div>
+        <div class="sex">
+          <div class="male">
+            <i class="ion-male"> 男</i>
+          </div>
+        </div>
+        <div class="form-control">
+          <label>昵称:</label>
+          <input type="text" name="username" ng-model="credentials.username" required>
+        </div>
+        <div class="form-control">
+          <label>邮箱:</label>
+          <input type="password" name="password" ng-model="credentials.email" required>
+        </div>
+        <div class="form-control">
+          <label>密码:</label>
+          <input type="text" name="email" ng-model="credentials.password" required>
+        </div>
+
+
+        <button ng-disabled="!registerForm.$valid" ng-click="register()"
+                class="button button-block button-royal">
+          完成
+        </button>
+      </div>
+
+
+
+
+    </form>
+  </ion-content>
+</ion-view>
