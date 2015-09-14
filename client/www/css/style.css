@@ -89,3 +89,37 @@ a {
   width: 100px;
   height: 100px;
 }
+.sex {
+  margin: 0 auto;
+  display: table;
+}
+.se {
+  display: inline-block;
+  border-radius: 30px;
+  margin: 20px 20px;
+}
+.sex .item-content {
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 40px
+}
+.sex .radio-icon {
+  visibility: visible;
+  font-size: 16px;
+  right: 30px;
+  padding-top: 6px;
+}
+.sex .item, .sex .item-content{
+  background-color: #868686;
+  color: #fff;
+  border-color: #fff;
+}
+.item-radio input[value="male"]:checked ~ .item-content {
+  /* style the item content when its checked */
+  background: #66ccff;
+}
+.item-radio input[value="female"]:checked ~.item-content {
+  background: #ff6699;
+}
+
